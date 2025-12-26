@@ -1,0 +1,160 @@
+/* assets/css/responsive.css - KODE FINAL */
+@media (max-width: 1200px) {
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width: 992px) {
+    .sidebar {
+        width: 240px;
+    }
+
+    .main-content {
+        margin-left: 240px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .top-bar-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-box {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+/* MOBILE STYLES (≤768px) */
+@media (max-width: 768px) {
+
+    /* Sidebar untuk mobile */
+    .sidebar {
+        transform: translateX(-100%);
+        width: 280px;
+        box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar.mobile-open {
+        transform: translateX(0) !important;
+    }
+
+    .sidebar.mobile-closed {
+        transform: translateX(-100%) !important;
+    }
+
+    .sidebar-close {
+        display: flex;
+    }
+
+    /* Main content */
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        transition: none;
+        /* Hapus transition untuk hindari blur */
+    }
+
+    /* Toggle button */
+    .mobile-toggle {
+        display: flex !important;
+    }
+
+    /* Top bar adjustments */
+    .top-bar {
+        padding: 15px 20px;
+        margin-top: 60px;
+        /* Beri space untuk toggle button */
+    }
+
+    .page-title {
+        font-size: 24px;
+    }
+
+    .content-wrapper {
+        padding: 20px;
+    }
+
+    /* Disable scroll ketika sidebar terbuka */
+    body.sidebar-open {
+        overflow: hidden;
+    }
+
+    /* Pastikan overlay bekerja dengan baik */
+    .overlay.active {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+        margin-top: 70px;
+    }
+
+    .top-bar-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+
+    .content-wrapper {
+        padding: 15px;
+    }
+
+    .mobile-toggle {
+        top: 10px;
+        left: 10px;
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar-header {
+        padding: 20px 15px;
+    }
+
+    .nav-item {
+        padding: 12px 20px;
+        margin: 0 5px;
+    }
+
+    .user-profile {
+        padding: 15px;
+    }
+
+    .content-wrapper {
+        padding: 10px;
+    }
+
+    .page-title {
+        font-size: 20px;
+    }
+}
